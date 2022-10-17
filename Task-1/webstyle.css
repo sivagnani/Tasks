@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    width:100%;
+}
+.header{
+    background-color: #3399cc;
+    padding: 0.25%;
+}
+.mainHeading{
+    font-family: 'Century Gothic';
+    color:#ffffff;
+    font-weight: 100;
+    margin-left: 1.7vw;
+    font-size: 53px;
+}
+.navigationBar{
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: 4vw 7vw 8vw 8vw auto;
+    column-gap: 1vw;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1.5vw;
+
+}
+.navItem{
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 100%;
+    font-weight:bold;
+    margin: auto;
+}
+.icon{
+    text-align: right;
+    margin-right: 2vw;
+}
+.information{
+    padding-left: 4vw;
+    padding-top: 4vh;
+}
+.news{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ebebeb;
+    width: 59vw;
+    padding: 10px;
+}
+.subHeading{
+    font-size: 150%;
+    font-family: 'dubai';
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0px;
+}
+.headlines{
+    list-style-type: none;
+    color: #02273a;
+    padding:0;
+    margin:0;
+    font-family: 'Gadugi';
+    font-size: 100%;
+    font-weight: 500;
+    text-shadow: 0.3px 0.5px #332e2ee5;
+}
+li{
+    margin-bottom: 18px;
+}
+li::before{
+    content: "-";
+    margin-left: 3px;
+    margin-right: 10px;
+}
+.welcome{
+    margin-top: 5vh;
+    width:80vw
+}
+p{
+    font-family: 'Gadugi';
+    color: #02273a;
+    font-size: 95%;
+    margin-top: 4px;
+    text-shadow: 0.1px 0.5px #1b1a1ae5;
+}
