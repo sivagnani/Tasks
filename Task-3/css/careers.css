@@ -56,14 +56,75 @@ body{
 }
 .career{
     padding: 20px 0px 0px 60px;
-    width:1000px;
+    width:1050px;
 }
 .careerHeading{
     font-weight: normal;
     font-family:'Century Gothic';
+    text-shadow: 0.1px 0.1px 1px;
     margin: 0px;
     font-weight: normal;
+    font-size: 28px;
+    color: #464646;
 }
 .weAre{
     font-family: "Ebrima";
+    text-shadow: 0px 0px 0.7px;
+    font-size: 16.5px;
+    color: #626262;
+    margin: 0px;
+    padding: 15px 5px ;
+}
+.details{
+    padding: 15px 0px 0px 60px;
+}
+input{
+    height: 32px;
+    width:185px;
+    padding: 0px;
+    border-color:#bbbbbb;
+    border-style: solid;
+    border-width: 2px;
+}
+table{
+    padding-left: 10px;
+    border-spacing: 15px;
+}
+th{
+    font-family: Calibri;
+    text-align: left;
+    width: 125px;
+}
+tr{
+    height: 40px;
+}
+label{
+    font-size: 18px;
+}
+#uploadbut{
+    cursor: pointer;
+    opacity:0;
+    width: 100px;
+}
+.button{
+    position:relative;
+    cursor: pointer;
+    right:115px;
+    width:100px;
+    height:32px;
+    border-color:#bbbbbb;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 18px;
+    z-index: -1;
+    font-family: Calibri;
+    font-weight: bold;
+}
+.submit{
+    text-align: left;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 18px;
+    width: 135px;
+    padding-left: 20px;
 }
