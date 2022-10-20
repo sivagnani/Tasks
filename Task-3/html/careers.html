@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/careers.css">
+        <script src="../JS/careers.js"></script>
     </head>
     <body>
         <header class="header">
@@ -23,13 +24,13 @@
         </div>
         <div class="details">
             <table>
-                <form>
+                <form onsubmit="checkForm()">
                     <tr>
                         <th>
                             <label for="name">Name</label>
                         </th>
                         <td>
-                            <input type="text" id="name">
+                            <input type="text" id="name" pattern="[A-Za-z\s]{4,}" required>
                         </td>
                     </tr>
                     <tr>
@@ -37,7 +38,7 @@
                             <label for="email">Email</label>
                         </th>
                         <td>
-                            <input type="text" id="email">
+                            <input type="text" id="email" onchange="validateEmail()" required>
                         </td>
                     </tr>
                     <tr>
@@ -53,10 +54,10 @@
                             <label for="upload">Upload Resume</label>
                         </th>
                         <td>
-                            <input type="text" id="upload">
+                            <input type="text" id="upload" readonly>
                         </td>
                         <td>
-                            <input type="file" id="uploadbut">
+                            <input type="file" id="uploadbut" onchange="display()" required>
                         </td>
                         <td>
                             <button class="button">Browse..</button>

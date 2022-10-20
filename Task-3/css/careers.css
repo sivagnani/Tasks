@@ -85,6 +85,7 @@ input{
     border-color:#bbbbbb;
     border-style: solid;
     border-width: 2px;
+    font-size: 18px;
 }
 table{
     padding-left: 10px;
@@ -127,4 +128,5 @@ label{
     font-size: 18px;
     width: 135px;
     padding-left: 20px;
+    cursor: pointer;
 }
