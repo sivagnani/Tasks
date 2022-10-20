@@ -130,3 +130,8 @@ label{
     padding-left: 20px;
     cursor: pointer;
 }
+.error{
+    color: red;
+    font-family: calibri;
+    margin: 0px;
+}

@@ -24,7 +24,7 @@
         </div>
         <div class="details">
             <table>
-                <form onsubmit="checkForm()">
+                <form id="details">
                     <tr>
                         <th>
                             <label for="name">Name</label>
@@ -39,6 +39,7 @@
                         </th>
                         <td>
                             <input type="text" id="email" onchange="validateEmail()" required>
+                            <p id="emailError" class="error"></p>
                         </td>
                     </tr>
                     <tr>
@@ -55,6 +56,7 @@
                         </th>
                         <td>
                             <input type="text" id="upload" readonly>
+                            <p id="uploadError" class="error"></p>
                         </td>
                         <td>
                             <input type="file" id="uploadbut" onchange="display()" required>
@@ -67,7 +69,8 @@
                         <th>
                         </th>
                         <td>
-                            <input type="submit" class="submit">
+                            <input type="button" value="Submit" class="submit" onclick="checkForm()">
+                            <p id="status" class="error"></p>
                         </td>
                     </tr>
                 </form>
