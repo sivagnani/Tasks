@@ -86,6 +86,7 @@ input{
     border-style: solid;
     border-width: 2px;
     font-size: 18px;
+    margin: 0px;
 }
 table{
     padding-left: 10px;
@@ -94,7 +95,6 @@ table{
 th{
     font-family: Calibri;
     text-align: left;
-    width: 125px;
 }
 tr{
     height: 40px;
@@ -121,6 +121,10 @@ label{
     font-family: Calibri;
     font-weight: bold;
 }
+.radio{
+    width: 20px;
+    height: auto;
+}
 .submit{
     text-align: left;
     font-family: Calibri;
@@ -134,4 +138,7 @@ label{
     color: red;
     font-family: calibri;
     margin: 0px;
+}
+.sameline{
+    display: inline;
 }

@@ -30,7 +30,19 @@
                             <label for="name">Name</label>
                         </th>
                         <td>
-                            <input type="text" id="name" pattern="[A-Za-z\s]{4,}" required>
+                            <input type="text" id="name" onchange="validateName()">
+                            <p class="error sameline">*</p>
+                            <p id="nameError" class="error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>Gender</label>
+                        </th>
+                        <td>
+                            <input class="radio" type="radio" name="gender" id="male" value="Sir" onclick="genderCheck(this.value)"><label for="male">Male</label><br>
+                            <input class="radio" type="radio" name="gender" id="female" value="Lady" onclick="genderCheck(this.value)"><label for="female">Female</label>
+                            <p id="genderError" class="error"></p>
                         </td>
                     </tr>
                     <tr>
@@ -38,31 +50,48 @@
                             <label for="email">Email</label>
                         </th>
                         <td>
-                            <input type="text" id="email" onchange="validateEmail()" required>
+                            <input type="text" id="email" onchange="validateEmail()">
+                            <p id="reqEmail" class="error sameline"></p>
                             <p id="emailError" class="error"></p>
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            <label for="desired">Desired Role</label>
+                            <label for="contact">Mobile Number</label>
                         </th>
                         <td>
-                            <input type="text" id="desired">
+                            <input type="text" id="contact" onchange="validateContact()">
+                            <p id="reqContact" class="error sameline"></p>
+                            <p id="emailError" class="error"></p>
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            <label for="upload">Upload Resume</label>
+                            <label>Contact You By</label>
                         </th>
                         <td>
-                            <input type="text" id="upload" readonly>
-                            <p id="uploadError" class="error"></p>
+                            <input class="radio" type="radio" name="contactby" id="mail" value="reqEmail" onclick="contactbyCheck(this.value)"><label for="mail">Email</label><br>
+                            <input class="radio" type="radio" name="contactby" id="mobile" value="reqContact" onclick="contactbyCheck(this.value)"><label for="mobile">Phone</label><br>
+                            <input class="radio" type="radio" name="contactby" id="both" value="reqBoth" onclick="contactbyCheck(this.value)"><label for="both">Both</label>
+                            <p id="" class="error"></p>
                         </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="contact">Organisation Name</label>
+                        </th>
                         <td>
-                            <input type="file" id="uploadbut" onchange="display()" required>
+                            <input type="text" id="contact" onchange="validateContact()" required>
+                            <p id="emailError" class="error"></p>
                         </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="city">City</label>
+                        </th>
                         <td>
-                            <button class="button">Browse..</button>
+                            <input type="text" id="city" onchange="validateContact()" required>
+                            <p id="emailError" class="error"></p>
                         </td>
                     </tr>
                     <tr>
