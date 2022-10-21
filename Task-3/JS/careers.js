@@ -92,6 +92,7 @@ function contactbyCheck(contactby){
         let number = validateContact(1); 
         return (email && number);
     }
+    return true;
 }
 function checkForm(){
     let name = validateName();
