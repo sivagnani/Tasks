@@ -58,7 +58,7 @@ function validateContact(req){
 }
 function validateEmail(req){
     let email = document.getElementById("email").value;
-    const mail = /^[a-zA-Z0-9.$*]+@[a-zA-Z0-9]+.[a-zA-Z0-9]{2,}$/;
+    const mail = /^[a-zA-Z0-9.$_*]+@[a-zA-Z0-9-]+.[a-zA-Z0-9.]{2,}$/;
     if(email.match(mail) || email==""){
         if(req==1 && email==""){
             document.getElementById('emailError').innerHTML="Please Enter Email";
@@ -78,33 +78,101 @@ function contactbyCheck(contactby){
     if(contactby=="reqContact"){
         document.getElementById('reqContact').innerHTML="*";
         document.getElementById('reqEmail').innerHTML="";
+        document.getElementById("emailError").innerHTML="";
+        document.getElementById("contactbyError").innerHTML="";
         return validateContact(1);
     }
-    if(contactby=="reqEmail"){
+    else if(contactby=="reqEmail"){
         document.getElementById('reqEmail').innerHTML="*";
         document.getElementById('reqContact').innerHTML="";
+        document.getElementById('contactError').innerHTML="";
+        document.getElementById("contactbyError").innerHTML="";
         return validateEmail(1);        
     }
-    if(contactby=="reqBoth"){
+    else if(contactby=="reqBoth"){
         document.getElementById('reqContact').innerHTML="*";
         document.getElementById('reqEmail').innerHTML="*";
+        document.getElementById("contactbyError").innerHTML="";
         let email = validateEmail(1);
         let number = validateContact(1); 
         return (email && number);
     }
-    return true;
+    else{
+        return true;
+    }
+}
+function requireContactby(){
+    let selected = false;
+    if(document.getElementById('mail').checked){
+        selected = true;
+        return selected && contactbyCheck('reqEmail');
+    }
+    else if(document.getElementById('mobile').checked){
+        selected = true;
+        return selected && contactbyCheck('reqContact');
+    }
+    else if(document.getElementById('both').checked){
+        selected = true;
+        return selected && contactbyCheck('reqBoth');
+    }
+    else{
+        document.getElementById('contactbyError').innerHTML="Please select a way of contact";
+        return false;
+    }
+}
+function reqOrganisation(){
+    let organisation = document.getElementById("organisation").value;
+    if(require(organisation)){
+        document.getElementById("organisationError").innerHTML="";
+        return true;
+    }
+    else{
+        document.getElementById("organisationError").innerHTML="Please Enter Organisation Name";
+        return false;
+    }
+}
+function changepromo(){
+    let val = document.getElementById("state").value;
+    if(val){
+        document.getElementById("promo").value= val+" - PROMO";
+    }
+    else{
+        document.getElementById("promo").value="";
+    }
+}
+function validateWebsite(){
+    let website = document.getElementById("website").value;
+    let web = /^www.+[a-zA-Z0-9.]+.[a-zA-Z]$/;
+    if(website.match(web) || website==""){
+        document.getElementById("websiteError").innerHTML = "";
+    }
+    else{
+        document.getElementById("websiteError").innerHTML = "Enter valid Website";
+    }
 }
 function checkForm(){
     let name = validateName();
     let gender = requireGender();
-    let number = contactbyCheck();
-    if(name && gender && number){
+    let number = requireContactby();
+    let organisation = reqOrganisation();
+    if(name && gender && number && organisation){
         document.getElementById("status").style.color="green";
         document.getElementById("status").innerHTML="Success";
+        document.getElementById("details").reset();
     }
     else{
         document.getElementById("status").style.color="red";
         document.getElementById("status").innerHTML="Enter valid Inputs";
     }
+}
+function resetForm(){
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("genderError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("contactError").innerHTML = "";
+    document.getElementById("organisationError").innerHTML = "";
+    document.getElementById("contactbyError").innerHTML = "";
+    document.getElementById("websiteError").innerHTML = "";
+    document.getElementById("status").innerHTML = "";
     document.getElementById("details").reset();
 }

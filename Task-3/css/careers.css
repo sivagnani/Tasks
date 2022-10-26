@@ -78,7 +78,7 @@ body{
 .details{
     padding: 15px 0px 0px 60px;
 }
-input{
+.input{
     height: 32px;
     width:185px;
     padding: 0px;
@@ -102,37 +102,38 @@ tr{
 label{
     font-size: 18px;
 }
+textarea{
+    overflow-y: scroll;
+    resize: none;
+    height: 100px;
+    width:100%;
+    padding: 0px;
+    border-color:#bbbbbb;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 18px;
+    margin: 0px;
+}
 #uploadbut{
     cursor: pointer;
     opacity:0;
     width: 100px;
 }
-.button{
-    position:relative;
-    cursor: pointer;
-    right:115px;
-    width:100px;
-    height:32px;
-    border-color:#bbbbbb;
-    border-style: solid;
-    border-width: 2px;
-    font-size: 18px;
-    z-index: -1;
-    font-family: Calibri;
-    font-weight: bold;
-}
 .radio{
     width: 20px;
     height: auto;
 }
-.submit{
-    text-align: left;
+.button{
+    text-align: center;
     font-family: Calibri;
     font-weight: bold;
     font-size: 18px;
     width: 135px;
-    padding-left: 20px;
     cursor: pointer;
+    height:32px;
+    border-color:#bbbbbb;
+    border-style: solid;
+    border-width: 2px;
 }
 .error{
     color: red;
@@ -141,4 +142,12 @@ label{
 }
 .sameline{
     display: inline;
+}
+p{
+    font-size: 18px;
+    font-family: Calibri;
+    margin: 0px;
+}
+.optional{
+    font-weight: bold;
 }
